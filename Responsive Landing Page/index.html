@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FoodieHub - Delicious food delivered fresh to your door. Order pizza, burgers, biryani and more." />
+  <title>FoodieHub 🍔 | Delicious Food Delivered Fresh</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="#home" class="logo">Foodie<span>Hub</span> 🍔</a>
+
+      <div class="nav-actions">
+        <!-- Cart Button -->
+        <button class="cart-btn" id="cartBtn" aria-label="View cart">
+          🛒 <span class="cart-count" id="cartCount">0</span>
+        </button>
+
+        <!-- Dark Mode Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#reviews" class="nav-link">Reviews</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#menu" class="btn-nav">Order Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-container">
+      <div class="hero-content reveal">
+        <span class="badge">🔥 Free delivery on first order</span>
+        <h1>Delicious Food, <span class="gradient-text">Delivered Fresh</span></h1>
+        <p>Order from your favorite restaurants. Hot, fresh, and at your doorstep in 30 minutes or less.</p>
+        <div class="hero-buttons">
+          <a href="#menu" class="btn btn-primary">🍕 Order Now</a>
+          <a href="#about" class="btn btn-secondary">Learn More</a>
+        </div>
+        <div class="hero-stats">
+          <div><h3>500+</h3><p>Recipes</p></div>
+          <div><h3>30min</h3><p>Delivery</p></div>
+          <div><h3>4.9★</h3><p>Rating</p></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="hero-circle"></div>
+        <div class="floating-card card-1">🍕 Hot & Fresh</div>
+        <div class="floating-card card-2">🚀 30-min Delivery</div>
+        <div class="floating-card card-3">⭐ 4.9 Rating</div>
+        <div class="hero-emoji">🍔</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MENU ============ -->
+  <section class="menu" id="menu">
+    <div class="section-header reveal">
+      <h2>Our <span class="gradient-text">Menu</span></h2>
+      <p>Freshly prepared with love — pick your favorite!</p>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="menu-filters reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="pizza">🍕 Pizza</button>
+      <button class="filter-btn" data-filter="burger">🍔 Burger</button>
+      <button class="filter-btn" data-filter="biryani">🍛 Biryani</button>
+      <button class="filter-btn" data-filter="dessert">🍰 Dessert</button>
+      <button class="filter-btn" data-filter="drinks">🥤 Drinks</button>
+    </div>
+
+    <div class="menu-grid" id="menuGrid">
+      <!-- Pizza -->
+      <article class="menu-card reveal" data-category="pizza">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&h=300&fit=crop" alt="Margherita Pizza" loading="lazy" />
+          <span class="badge-hot">🔥 Hot</span>
+          <span class="price">₹299</span>
+        </div>
+        <div class="card-body">
+          <div class="card-rating">⭐⭐⭐⭐⭐ <span>(4.8)</span></div>
+          <h3>Margherita Pizza</h3>
+          <p>Classic cheese pizza with fresh basil & tomato sauce.</p>
+          <button class="btn-add" data-name="Margherita Pizza" data-price="299">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="menu-card reveal" data-category="pizza">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop" alt="Pepperoni Pizza" loading="lazy" />
+          <span class="price">₹399</span>
+        </div>
+        <div class="card-body">
+          <div class="card-rating">⭐⭐⭐⭐⭐ <span>(4.7)</span></div>
+          <h3>Pepperoni Pizza</h3>
+          <p>Loaded with pepperoni & extra mozzarella cheese.</p>
+          <button class="btn-add" data-name="Pepperoni Pizza" data-price="399">Add to Cart</button>
+        </div>
+      </article>
+
+      <!-- Burger -->
+      <article class="menu-card reveal" data-category="burger">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop" alt="Cheese Burger" loading="lazy" />
+          <span class="badge-hot">🔥 Popular</span>
+          <span class="price">₹199</span>
+        </div>
+        <div class="card-body">
+          <div class="card-rating">⭐⭐⭐⭐⭐ <span>(4.9)</span></div>
+          <h3>Classic Cheese Burger</h3>
+          <p>Juicy beef patty with cheddar, lettuce & special sauce.</p>
+          <button class="btn-add" data-name="Cheese Burger" data-price="199">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="menu-card reveal" data-category="burger">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=400&h=300&fit=crop" alt="Chicken Burger" loading="lazy" />
+          <span class="price">₹249</span>
+        </div>
+        <div class="card-body">
+          <div class="card-rating">⭐⭐⭐⭐ <span>(4.6)</span></div>
+          <h3>Crispy Chicken Burger</h3>
+          <p>Crunchy fried chicken with spicy mayo & pickles.</p>
+          <button class="btn-add" data-name="Chicken Burger" data-price="249">Add to Cart</button>
+        </div>
+      </article>
+
+      <!-- Biryani -->
+      <article class="menu-card reveal" data-category="biryani">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&h=300&fit=crop" alt="Chicken Biryani" loading="lazy" />
+          <span class="badge-hot">⭐ Bestseller</span>
+          <span class="price">₹349</span>
+        </div>
+        <div class="card-body">
+          <div class="card-rating">⭐⭐⭐⭐⭐ <span>(5.0)</span></div>
+          <h3>Hyderabadi Chicken Biryani</h3>
+          <p>Authentic dum biryani with tender chicken & saffron rice.</p>
+          <button class="btn-add" data-name="Chicken Biryani" data-price="349">Add to Cart</button>
+        </div>
+      </article>
+
+      <!-- Dessert -->
+      <article class="menu-card reveal" data-category="dessert">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop" alt="Chocolate Cake" loading="lazy" />
+          <span class="price">₹179</span>
+        </div>
+        <div class="card-body">
+          <div class="card-rating">⭐⭐⭐⭐⭐ <span>(4.8)</span></div>
+          <h3>Chocolate Lava Cake</h3>
+          <p>Warm chocolate cake with molten center & vanilla ice cream.</p>
+          <button class="btn-add" data-name="Chocolate Cake" data-price="179">Add to Cart</button>
+        </div>
+      </article>
+
+      <!-- Drinks -->
+      <article class="menu-card reveal" data-category="drinks">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400&h=300&fit=crop" alt="Cold Coffee" loading="lazy" />
+          <span class="price">₹129</span>
+        </div>
+        <div class="card-body">
+          <div class="card-rating">⭐⭐⭐⭐ <span>(4.5)</span></div>
+          <h3>Iced Cold Coffee</h3>
+          <p>Chilled coffee blended with ice cream & chocolate.</p>
+          <button class="btn-add" data-name="Cold Coffee" data-price="129">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="menu-card reveal" data-category="drinks">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=400&h=300&fit=crop" alt="Fresh Juice" loading="lazy" />
+          <span class="price">₹99</span>
+        </div>
+        <div class="card-body">
+          <div class="card-rating">⭐⭐⭐⭐ <span>(4.4)</span></div>
+          <h3>Fresh Orange Juice</h3>
+          <p>100% natural orange juice, freshly squeezed daily.</p>
+          <button class="btn-add" data-name="Orange Juice" data-price="99">Add to Cart</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="about-container">
+      <div class="about-visual reveal">
+        <div class="about-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=500&h=400&fit=crop" alt="Chef preparing food" loading="lazy" />
+        </div>
+      </div>
+      <div class="about-text reveal">
+        <h2>Why Choose <span class="gradient-text">FoodieHub?</span></h2>
+        <p>We deliver happiness in every bite. Fresh ingredients, expert chefs, and lightning-fast delivery — that's our promise.</p>
+        <ul class="check-list">
+          <li>✅ Fresh ingredients sourced daily</li>
+          <li>✅ Award-winning chefs</li>
+          <li>✅ 30-minute delivery guarantee</li>
+          <li>✅ 100% hygiene certified</li>
+          <li>✅ Free delivery on orders above ₹499</li>
+        </ul>
+        <a href="#menu" class="btn btn-primary">Explore Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section class="reviews" id="reviews">
+    <div class="section-header reveal">
+      <h2>What Our <span class="gradient-text">Customers Say</span></h2>
+      <p>Over 10,000 happy customers and counting!</p>
+    </div>
+
+    <div class="reviews-grid">
+      <article class="review-card reveal">
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        <p>"The biryani was absolutely amazing! Delivered hot in 25 minutes. FoodieHub is now my go-to!"</p>
+        <div class="reviewer">
+          <div class="avatar">A</div>
+          <div>
+            <h4>Arun Kumar</h4>
+            <span>Regular Customer</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card reveal">
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        <p>"Best pizza in town! The cheese pull is unreal. My friends and I order every weekend."</p>
+        <div class="reviewer">
+          <div class="avatar">P</div>
+          <div>
+            <h4>Priya Sharma</h4>
+            <span>Food Blogger</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card reveal">
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        <p>"Fast delivery, fresh food, great packaging. The chocolate cake was divine!"</p>
+        <div class="reviewer">
+          <div class="avatar">K</div>
+          <div>
+            <h4>Karthik R</h4>
+            <span>Verified Buyer</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta">
+    <div class="cta-content reveal">
+      <h2>Hungry? <span class="gradient-text">Order Now!</span></h2>
+      <p>Get 50% off on your first order. Use code <strong>HUNGRY50</strong></p>
+      <a href="#menu" class="btn btn-primary">🍕 Start Ordering</a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="contact">
+    <div class="footer-container">
+      <div class="footer-col">
+        <a href="#home" class="logo">Foodie<span>Hub</span> 🍔</a>
+        <p>Delivering happiness in every bite since 2020.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="YouTube">📺</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul>
+          <li>📍 123 Food Street, Chennai</li>
+          <li>📞 +91 98765 43210</li>
+          <li>✉️ hello@foodiehub.com</li>
+          <li>🕐 10 AM - 11 PM Daily</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 FoodieHub. All rights reserved. | Made with ❤️</p>
+    </div>
+  </footer>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar" aria-label="Shopping cart">
+    <div class="cart-header">
+      <h3>🛒 Your Cart</h3>
+      <button class="cart-close" id="cartClose" aria-label="Close cart">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="empty-cart">Your cart is empty 😢</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cartTotal">₹0</span>
+      </div>
+      <button class="btn btn-primary btn-checkout" id="checkoutBtn">Checkout</button>
+    </div>
+  </aside>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">Item added to cart! ✅</div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
