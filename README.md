@@ -23,5 +23,5 @@ A modern, fully responsive restaurant landing page built with HTML, CSS, and Van
 - `script.js` - Cart logic, theme toggle, animations, and interactivity
 
 ## 👨‍💻 Author
-Archana
+**Archana**
 Codveda Technologies Intern
